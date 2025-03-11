@@ -6,3 +6,10 @@
 @import 'toppings.css';
 @import 'pizza.css';
 @import 'card.css';
+@import 'footer.css';
+@import 'loader.css';
+@import 'modal.css';
+@import 'modal-pizza.css';
+@import 'modal-cart.css';
+@import 'modal-delivery.css';
+@import 'order.css';

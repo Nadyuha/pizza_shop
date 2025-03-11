@@ -1,0 +1,198 @@
+/* .modal-delivery {
+  display: flex;
+} */
+
+.modal-delivery__main {
+  max-width: 292px;
+  width: 100%;
+}
+
+.modal-delivery__title {
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+.modal-delivery__footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid #d9d9d9;
+  padding-top: 20px;
+}
+
+.modal-delivery__price {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+.modal-delivery__button {
+  border-radius: 32px;
+  padding: 8px 24px;
+  background: var(--orange);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.modal-delivery__button-back {
+  background: var(--light);
+  color: var(--orange);
+}
+
+.modal-delivery__close {
+  width: 20px;
+  height: 20px;
+}
+
+.modal-delivery__fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-bottom: 8px;
+}
+
+.modal-delivery__fieldset-input {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-bottom: 20px;
+  grid-template-areas: 
+  "name name"
+  "tel tel"
+  "adress adress"
+  ;
+}
+
+.modal-delivery__label-input {
+  outline: none;
+  border: none;
+}
+
+.modal-delivery__input {
+  width: 100%;
+  outline: none;
+  border-radius: 32px;
+  padding: 8px 24px;
+  background: var(--light);
+  border: 1px solid transparent;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--beige);
+}
+
+.modal-delivery__input::placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--beige);
+}
+
+.modal-delivery__label-input-name {
+  grid-area: name;
+}
+
+.modal-delivery__label-input-tel {
+  grid-area: tel;
+}
+
+.modal-delivery__label-input-adress {
+  grid-area: adress;
+}
+
+.modal-delivery__fieldset {
+  display: flex;
+  gap: 24px;
+}
+
+.modal-delivery__legend {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.modal__radio {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.modal__radio-input {
+  appearance: none;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  background: var(--white);
+  border-radius: 100%;
+  border: 1px solid var(--dark);
+}
+
+.modal__radio-input::after {
+  content: "";
+  position: absolute;
+  background: var(--dark);
+  top: 1.3px;
+  right: 0;
+  left: 1.5px;
+  bottom: 0;
+  border-radius: 100%;
+  width: 0px;
+  height: 0px;
+}
+
+.modal__radio-input:checked::after {
+  width: 10px;
+  height: 10px;
+}
+
+
+
+@media (width >=620px) {
+  .modal-delivery__main {
+    max-width: 724px;
+    width: 100%;
+  }
+
+  .modal-delivery__title {
+    font-size: 44px;
+  }
+
+  .modal-delivery__price {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .modal-delivery__button  {
+    font-size: 20px;
+  }
+
+  .modal-delivery__footer {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .modal-delivery__fieldset-input {
+    display: grid;
+    gap: 8px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    margin-bottom: 20px;
+    grid-template-areas: 
+    "name tel"
+    "adress adress"
+    ;
+  }
+}

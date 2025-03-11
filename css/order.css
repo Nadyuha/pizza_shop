@@ -1,0 +1,23 @@
+.order-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(black, 0.4);
+  z-index: 1000;
+  text-align: center;
+}
+
+.order-message__text {
+  margin-bottom: 20px;
+}
+
+.order-message__close-button {
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 6px;
+}
