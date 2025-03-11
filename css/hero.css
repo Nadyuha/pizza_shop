@@ -79,6 +79,11 @@
   font-weight: 600;
   font-size: 14px;
   color: var(--orange);
+  transition: background-color .5s ease;
+}
+
+.hero__order:hover {
+  background-color: #fadebe;
 }
 
 /* media */

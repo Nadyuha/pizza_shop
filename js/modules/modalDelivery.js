@@ -48,6 +48,10 @@ export const createModalDelivery = (data,totalPrice) => {
       e.preventDefault();
 
       modal.style.display = 'none';
+
+      const countProduct = document.querySelector('.header__cart-span');
+			countProduct.textContent = '0'
+
       localStorage.removeItem('cartItem');
       localStorage.removeItem('cartProductDetails');
       localStorage.removeItem('cartOrder');

@@ -76,6 +76,10 @@ const updateCartItem = async (productId) => {
 
   localStorage.setItem('cartItem', JSON.stringify(cartItems));
 
+
+  const countProduct = document.querySelector('.header__cart-span');
+  countProduct.textContent = cartItems.length;
+  
   const ids = cartItems.map(item => item.id);
   if (ids.length === 0) {
     modalList.textContent = "";

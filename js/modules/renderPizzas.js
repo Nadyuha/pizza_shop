@@ -6,6 +6,14 @@ import { createCart, addToCart } from "./cart.js";
 
 import { createModalCard } from "./modalCard.js";
 
+export const headerCount = () => {
+	const countProduct = document.querySelector('.header__cart-span');
+	const cartItems = JSON.parse(localStorage.getItem('cartItem') || "[]" );
+	countProduct.textContent = cartItems.length;
+}
+
+headerCount();
+
 const createCard = (data) => {
   const card = document.createElement('article');
   card.classList.add('card');
@@ -31,7 +39,6 @@ const createCard = (data) => {
   `;
 
   card.addEventListener('click', () => {
-		
 		createModalCard(data);
 		
     const modal = document.querySelector('.modal-pizza');
@@ -44,8 +51,7 @@ const createCard = (data) => {
 			const productId = target.id;
 
 			addToCart(productId);
-			// localStorage.removeItem('cartItem');
-			// localStorage.removeItem('cartProductDetails')
+			headerCount();
 
 			modal.style.display = 'none';
 		})
@@ -76,8 +82,9 @@ export const renderPizzas = async (toppings) => {
 };
 
 const cart = document.querySelector('.header__cart');
+const orderBtn = document.querySelector('.hero__order');
 
-cart.addEventListener('click', async () => {
+async function openBasket() {
 	const modalBasket = document.querySelector('.modal-cart');
 	modalBasket.style.display = 'flex';
 
@@ -99,11 +106,10 @@ cart.addEventListener('click', async () => {
 		modalList.append(listItem);
 
 		return;
-	}
-	
+	} else {
 		cartBtn.removeAttribute('disabled');
 		cartBtn.style.cursor = "pointer";
-	
+	}
 	let products;
 	let productsArr = [];
 	modalList.textContent = "";
@@ -118,4 +124,12 @@ cart.addEventListener('click', async () => {
 
 	createCart(product, modalList, cartItems);
 
+}
+
+orderBtn.addEventListener('click', () => {
+	openBasket();
+})
+
+cart.addEventListener('click', async () => {
+	openBasket();
 })
