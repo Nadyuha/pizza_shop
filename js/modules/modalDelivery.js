@@ -50,7 +50,10 @@ export const createModalDelivery = (data,totalPrice) => {
       modal.style.display = 'none';
 
       const countProduct = document.querySelector('.header__cart-span');
-			countProduct.textContent = '0'
+			countProduct.textContent = '0';
+
+      const modalCartPrice = document.querySelector('.modal-cart__price');
+      modalCartPrice.textContent = "0" + " " + "₽";
 
       localStorage.removeItem('cartItem');
       localStorage.removeItem('cartProductDetails');
@@ -116,6 +119,7 @@ export const createModalDelivery = (data,totalPrice) => {
 
       modalList.textContent = '';
       createCart(product, modalList, cartItems);
+      total.textContent = '';
       total.textContent = "0" + " " + "₽";
     })
 
