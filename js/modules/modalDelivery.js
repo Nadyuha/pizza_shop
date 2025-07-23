@@ -99,7 +99,7 @@ export const createModalDelivery = (data,totalPrice) => {
       }
 
       try {
-        const response = await fetch(`https://lying-flannel-cabbage.glitch.me/api/orders`, {
+        const response = await fetch(`https://go-go-pizza-api-25.onrender.com/api/orders`, {
           method: 'POST',
           headers: {
             "Content-Type": "application/json",

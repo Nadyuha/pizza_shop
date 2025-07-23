@@ -2,7 +2,7 @@ import { getData } from "./getData.js";
 import { renderPizzas } from "./renderPizzas.js";
 
 export const renderToppings = async () => {
-    const {en:enToppings, ru:ruToppings} = await getData('https://probable-noisy-saver.glitch.me/api/toppings');
+    const {en:enToppings, ru:ruToppings} = await getData('https://go-go-pizza-api-25.onrender.com/api/toppings');
     const toppingsList = document.querySelector('.toppings__list');
     toppingsList.textContent = '';
   

@@ -97,7 +97,7 @@ const updateCartItem = async (productId) => {
   let products;
   let productsArr = [];
   for (let i = 0; i < ids.length; i++) {
-    products = await getData(`https://occipital-efficient-coral.glitch.me/api/products/${ids[i]}`);
+    products = await getData(`https://go-go-pizza-api-25.onrender.com/api/products/${ids[i]}`);
     productsArr.push(products)
     localStorage.setItem('cartProductDetails', JSON.stringify(productsArr));
   }

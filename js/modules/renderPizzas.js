@@ -64,7 +64,7 @@ const createCard = (data) => {
 const modalList = document.querySelector('.modal-cart__list');
 
 export const renderPizzas = async (toppings) => {
-  const pizzas = await getData(`https://occipital-efficient-coral.glitch.me/api/products${
+  const pizzas = await getData(`https://go-go-pizza-api-25.onrender.com/api/products${
                                 toppings ? `?toppings=${toppings}` : ''}`);
   const pizzaList = document.querySelector('.pizza__list');
   pizzaList.textContent = '';
@@ -115,7 +115,7 @@ async function openBasket() {
 	modalList.textContent = "";
 	
 	for(let i = 0; i < ids.length; i++) {
-		products = await getData(`https://occipital-efficient-coral.glitch.me/api/products/${ids[i]}`);
+		products = await getData(`https://go-go-pizza-api-25.onrender.com/api/products/${ids[i]}`);
 		productsArr.push(products)
 		localStorage.setItem('cartProductDetails', JSON.stringify(productsArr));
 	}
